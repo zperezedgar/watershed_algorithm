@@ -1,7 +1,16 @@
+import numpy as np
+import cv2
+
 def watershed(img):
-    #documentar
-    #Watershed algorithm
-    # img must be RGB
+    """
+    This function implements image segmentation to img by using the watershed algorithm.
+    :param:
+    img: The image in RGB format to which the algorithm will be applied.
+    :return:
+    The image obtained with the watershed algorithm. 
+    In this image the sure background of img has been identified and colored black.
+    The rest of the image remains the same.
+    """
     
     img = img.copy()
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
@@ -36,6 +45,7 @@ def watershed(img):
     markers[unkown==255] = 0
 
     markers = cv2.watershed(img, markers)
-    img[markers==1] = [0,0,0]
+    img[markers==1] = [0,0,0] #sure background
+    #img[markers==-1] = [0,0,0] #boundary region
     
     return img
