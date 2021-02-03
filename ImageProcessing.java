@@ -84,7 +84,7 @@ public class ImageProcessing {
         for(int i=0; i <markers.rows(); i++){
 
             for(int j=0; j < markers.cols(); j++){
-                if(markers.get(i, j)[0] == 1){
+                if(markers.get(i, j)[0] == 1){ //1 is sure background (use -1 for sure boundary region)
                     img.put(i, j, 0,0,0);
                 }
             }
