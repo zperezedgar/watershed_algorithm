@@ -54,17 +54,9 @@ public class MainActivity extends AppCompatActivity {
         Mat mat8UC = new Mat(mat.size(), CvType.CV_8UC(3));
         Imgproc.cvtColor(mat, mat8UC, Imgproc.COLOR_RGBA2RGB);
 
-        //mat = ImageProcessing.Watershed(Mat.ones(640, 640, CvType.CV_8UC(3)));
         mat8UC = ImageProcessing.Watershed(mat8UC);
         Iv2.setImageBitmap(ImageProcessing.convertMatToBitMap(mat8UC));
 
-        //try {
-            //mat = Utils.loadResource(this, R.drawable.finger, CvType.CV_8UC4);
-        //} catch (IOException e) {
-            //e.printStackTrace();
-        //}
-
-        //mat = Imgcodecs.imread(getResources().getDrawable(R.drawable.finger).toString());
         ///////////////////////////////////////////////////////////////////////////////////
 
     }
