@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         Iv2 = (ImageView) findViewById(R.id.imageView2);
 
         ////int drawableID = this.getResources().getIdentifier("finger", "drawable", getPackageName());
-        imageBitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.test_4);
+        imageBitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.nail);
         //Iv.setImageBitmap(imageBitmap);
 
         ///////////////////////////////////////////////////////////////////////////////////
