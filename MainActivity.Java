@@ -53,10 +53,6 @@ public class MainActivity extends AppCompatActivity {
         //Log.i("tipo mat", String.valueOf(mat.type()));
         Mat mat8UC = new Mat(mat.size(), CvType.CV_8UC(3));
         Imgproc.cvtColor(mat, mat8UC, Imgproc.COLOR_RGBA2RGB);
-        //mat.convertTo(mat8UC, CvType.CV_8U);
-        //Log.i("despues tipo mat", String.valueOf(mat8UC.type()));
-        //Log.i("buen tipo mat", String.valueOf(Mat.ones(640, 640, CvType.CV_8UC(3)).type()));
-        //Log.i("channels", String.valueOf(mat8UC.channels()));
 
         //mat = ImageProcessing.Watershed(Mat.ones(640, 640, CvType.CV_8UC(3)));
         mat8UC = ImageProcessing.Watershed(mat8UC);
